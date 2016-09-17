@@ -43,7 +43,7 @@ install the plugin:
 Add the following line to your `~/.vimrc` file
 
 ``` vim
-Plugin 'macroxue/buffer-acronym'
+Plugin 'macroxue/vim-buffer-acronym'
 ```
 
 Then run
