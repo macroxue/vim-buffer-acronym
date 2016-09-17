@@ -21,14 +21,14 @@ awesome-program.h
 awesome_test.cc
 ```
 Then
- * `-apc<cr>` switches to `awesome_program.cc`
- * `-aph<cr>` switches to `awesome_program.h`
+ * `-apc<cr>` switches to `awesome-program.cc`
+ * `-aph<cr>` switches to `awesome-program.h`
  * `-at<cr>` or `-atc<cr>` switches to `awesome_test.cc`
- * `-ap<tab>` cycles between `awesome_program.cc` and `awesome_program.h`
+ * `-ap<tab>` cycles between `awesome-program.cc` and `awesome-program.h`
  * `-a<tab>` cycles through all three files.
 
 When there are multiple matches, the first one is picked.  So either `-a<cr>`
-or `-ap<cr>` switches to `awesome_program.cc`.
+or `-ap<cr>` switches to `awesome-program.cc`.
 
 
 Installation
