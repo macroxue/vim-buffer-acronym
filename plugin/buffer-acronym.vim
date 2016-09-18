@@ -1,9 +1,14 @@
 " Switching buffer by acronym
 
-if exists("g:loaded_buffer_acronym")
+if exists("g:buffer_acronym_loaded")
   finish
 endif
-let g:loaded_buffer_acronym = 1
+let g:buffer_acronym_loaded = 1
+
+if !exists("g:buffer_acronym_from_start")
+  " Acronym starts from the first word.
+  let g:buffer_acronym_from_start = 1
+endif
 
 command! -complete=customlist,MatchBuffers -nargs=1 BufferAcronym :call SwitchBuffer(<f-args>)
 nnoremap - :BufferAcronym<space>
@@ -64,7 +69,11 @@ function! Pattern(acronym)
     endif
   endfor
   "echom 'pattern=' . pattern
-  return '^' . pattern
+  if g:buffer_acronym_from_start == 1
+    return '^' . pattern
+  else
+    return pattern
+  endif
 endfunction
 
 function! FewerWordsFirst(x, y)
