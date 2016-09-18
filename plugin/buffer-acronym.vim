@@ -56,11 +56,11 @@ function! Pattern(acronym)
   let pattern = ''
   for char in split(a:acronym, '\zs')
     if char =~ '\u'
-      let pattern = pattern . s:sep . '\?\u\@<!' . char . '\u*\l*'
+      let pattern = pattern . s:sep . '\?\u\@<!' . char . '\u*\l*\d*'
     elseif pattern == ''
-      let pattern = pattern . s:sep . '\?' . char . '\l*'
+      let pattern = pattern . s:sep . '\?' . char . '\l*\d*'
     else
-      let pattern = pattern . s:sep . char . '\l*'
+      let pattern = pattern . s:sep . char . '\l*\d*'
     endif
   endfor
   "echom 'pattern=' . pattern
