@@ -100,10 +100,10 @@ endfunction
 
 function! Prefix(buf)
   let pos = len(a:buf) - 1
-  while pos >= 0 && a:buf[pos]!~ s:sep
+  while pos >= 0 && a:buf[pos] !~ s:sep
     let pos -= 1
   endwhile
-  return pos > 0 ? a:buf[0:pos-1]. '.' : ""
+  return pos > 0 ? a:buf[0:pos-1] . '.' : ""
 endfunction
 
 " =============================== Unit tests ===============================
