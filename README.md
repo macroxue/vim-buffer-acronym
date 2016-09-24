@@ -10,10 +10,13 @@ The switching function is invoked by `-` (minus) key. Additionally, `_`
 (underscore) key lists all buffers before switching. It's OK to enter
 either target buffer's acronym or number. There are a few rules
 in matching acronyms.
- * All paths are ignored, e.g. `path/to/file.ext` is treated as `file.ext`.
- * Characters ` ` (space), `_`, `.` and `-` separate words in the file name.
+ * `g:buffer_acronym_with_path` controls whether an acronym should include the
+   path component and the default is yes. If set to no, `path/to/file.ext` is
+   treated as `file.ext`.
+ * Characters `/`, ` ` (space), `_`, `.` and `-` separate words in the file name.
  * Each uppercase letter starts a new word unless it follows an uppercase letter.
- * An acronym must start from the first word.
+ * `g:buffer_acronym_from_start` controls whether an acronym should start from
+   the first word is controlled by and the default is no.
 
 For example, you have the following files opened in Vim.
 ```
