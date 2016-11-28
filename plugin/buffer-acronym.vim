@@ -32,12 +32,7 @@ function! SwitchBuffer(buf)
   if len(matches) == 0
     let matches = [name]
   endif
-  if tabpagewinnr(tabpagenr(), '$') == 1
-    exe "vertical sbuffer " . matches[0]
-  else
-    "exe "normal!x"
-    exe "buffer " . matches[0]
-  endif
+  exe "buffer " . matches[0]
 endfunction
 
 function! MatchBuffers(acronym, L, P)
