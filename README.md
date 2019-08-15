@@ -16,7 +16,7 @@ in matching acronyms.
  * Characters `/`, ` ` (space), `_`, `.` and `-` separate words in the file name.
  * Each uppercase letter starts a new word unless it follows an uppercase letter.
  * `g:buffer_acronym_from_start` controls whether an acronym should start from
-   the first word is controlled by and the default is no.
+   the first word and the default is no.
 
 For example, you have the following files opened in Vim.
 ```
